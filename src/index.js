@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import Card from './Card';
-import CardList from './CardList'
+import App from './App'
 import registerServiceWorker from './registerServiceWorker';
 import 'tachyons' 
-import {kids} from './kids'
+//since we can have more arrays in that file we have to deconstruct kids
+//import {kids} from './kids'
 // I want react dom to use a method called render
-ReactDOM.render(
-<CardList kids={kids}/>, 
+ReactDOM.render(<App />,
+    //kids can be used in other files linked to index.js
+    //here we are specyfing kids to be used in CardList
 document.getElementById('root'));
 registerServiceWorker();
